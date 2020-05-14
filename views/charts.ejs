@@ -23,6 +23,9 @@
     <!-- Custom styles for this template-->
     <link href="css/sb-admin.css" rel="stylesheet">
 
+    <!-- Chart.js -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.css" rel="stylesheet">
+
   </head>
 
   <body id="page-top">
@@ -105,23 +108,22 @@
           <div class="row">
 
             <div class="col-12 col-md-4 mb-3 chart">
-              <img class="img-fluid" src="/images/chart1.jpg">
+              <canvas data-male="<%=maleNb%>" data-female="<%=femaleNb%>" id="chartBar" width="100" height="100" ></canvas>
             </div>
 
             <div class="col-12 col-md-4 mb-3 chart">
-              <img class="img-fluid" src="/images/chart2.jpg">
+              <canvas id="doughnut" data-lu="<%=messlu%>" data-messagenonlu="<%=messnnLu%>" width="100" height="100" ></canvas>
             </div>
 
             <div class="col-12 col-md-4 mb-3 chart">
-              <img class="img-fluid" src="/images/chart3.jpg">
+              <canvas id="pie" data-exp="<%=exp%>" data-nnexp="<%=nnExp%>" width="100" height="100" ></canvas>
             </div>
 
             <div class="col-12 col-md-4 mb-3 chart">
-              <img class="img-fluid" src="/images/chart4.jpg">
+              <canvas data-dataca="<%=JSON.stringify(dataCA)%>" data-="" id="linechart" width="100" height="100" ></canvas>
             </div>
             
           </div>
-
         </div>
         <!-- /.container-fluid -->
 
@@ -140,8 +142,7 @@
     </div>
     <!-- /#wrapper -->
 
-
-
+    
     <!-- Bootstrap core JavaScript-->
     <script src="vendor/jquery/jquery.min.js"></script>
     <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
@@ -154,6 +155,10 @@
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin.min.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.3/Chart.min.js"></script>
+    <script src="js/dataviz.js"></script>
 
   </body>
 
